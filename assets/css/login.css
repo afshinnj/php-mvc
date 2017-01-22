@@ -1,0 +1,67 @@
+/* Stylesheet / CSS */
+
+
+/* Many base styles are set in base.css, part of the skeleton framework
+----------------------------------------------------------------------------------------------------*/
+@font-face {
+	font-family: 'IRANSans';
+	src: url('fonts/IRANSansWeb.eot');
+	src: url('fonts/IRANSansWeb.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('fonts/IRANSansWeb.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('fonts/IRANSansWeb.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'IRANSansNums';
+	src: url('fonts/IRANSansWeb(FaNum).eot');
+	src: url('fonts/IRANSansWeb(FaNum).woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('fonts/IRANSansWeb(FaNum).woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('fonts/IRANSansWeb(FaNum).ttf') format('truetype');
+}
+body{
+  padding-top: 30px;
+  font-family: IRANSansNums, Arial, Helvetica, sans-serif;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: #FFF;
+  border-radius: 3px;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.error{
+    margin-top: 10px;
+    color: red;
+
+}

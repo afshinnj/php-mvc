@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fa">
+    <head>
+    <meta charset="UTF-8">
+        <title>404</title>        <meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">        <!-- Styles -->
+        <link href="/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+<link href="/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css">
+<link href="/css/material.min.css" media="screen" rel="stylesheet" type="text/css">
+<link href="/css/style.css?v=36" media="screen" rel="stylesheet" type="text/css">
+<link href="/images/logos/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">        <!-- Scripts -->
+        <!--[if lt IE 9]><script type="text/javascript" src="/js/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="/js/respond.min.js"></script><![endif]-->
+<script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script> 
+        <style>
+			body {
+			    background-image: url("/images/background-texture/0.png");
+			}
+			.custom-flash-messanger {
+				width: 1170px;
+				margin-top: 32px;
+				margin-bottom: 0px;
+				margin: 27px auto 0px;
+				margin-top: 27px;
+				text-align: right;
+				direction: rtl;
+			}
+        </style>
+        <meta name="fontiran.com:license" content="G5G63">
+        <meta name="author" content="SokanAcademy.com">
+        <link href="https://plus.google.com/u/0/b/115178868271198437837/+Sokanacademy/about" rel="publisher" />
+    </head>
+    <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand top_header_logo" title="سکان آکادمی">
+                    <img src="/images/logos/header-logo.png" alt="سکان آکادمی" width="115" height="39">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav pull-right">
+
+                    			          	  <li class="menu-item"><a href="/signin?redirect=/fonts/iransans/eot/IRANSansWeb.ttf" data-scroll>ورود</a></li>
+					      <li class="menu-item"><a href="/signup?redirect=/fonts/iransans/eot/IRANSansWeb.ttf" data-scroll>ثبت نام</a></li>		 
+			        			        <li class="menu-item"><a title="دوره ی های آموزشی" href="/categories" data-scroll>دوره های آموزشی</a></li>
+			        <li class="menu-item"><a title="وبلاگ :: آخرین اخبار طراحی سایت، برنامه نویسی و سئو" href="/blog" >وبلاگ</a></li>
+			        <li class="menu-item"><a title="تالار گفتوی برنامه نویسی سکان آکادمی" href="/forum" >تالار گفتگو</a></li>
+			        <li class="menu-item"><a title="جابز :: استخدام برنامه نویس" href="/jobs" >جابز</a></li>
+			        <li class="menu-item"><a title="پادکست های سکان آکادمی" href="/podcast" >پادکست</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+                <div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <ol class="breadcrumb">
+                <li><a href="/">صفحه اصلی</a></li>
+                <li class="active">خطا در یافتن صفحه مورد نظر</li>
+            </ol>
+        </div>
+    </div>
+	<br>
+	<br>
+    <img class="center-block img img-responsive" src="/images/404/not-found.png">
+    <div class="row bodyText">
+        <div style="text-align: center;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<p>متاسفانه صفحه ای از سکان آکادمی که به دنبال آن هستید از سایت حذف شده است.</p>
+        </div>
+    </div>
+    <br>
+    <br>
+</div> <!-- End of Container -->
+        <footer><!-- Start of Footer -->
+            <div class="row" id="footerHorizontalBar">
+                <div class="container"><!-- start of footer container -->
+                  <div class="row" style="text-align: center;">
+                     <img src="/images/logos/footer-logo.png" alt="سکان آکادمی" width="159" height="82">
+                  </div>
+                  <br class="hidden-xs">
+                  <div class="row footerLinks">
+                      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 center-block">
+                          <h4>درباره سکان آکادمی</h4>
+                          <div><a title="درباره سکان آکادمی" href="/%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87-%D8%B3%DA%A9%D8%A7%D9%86-%D8%A2%DA%A9%D8%A7%D8%AF%D9%85%DB%8C">درباره ما</a></div>
+                          <div><a title="تیم اجرایی سکان آکادمی" href="/%D8%AA%DB%8C%D9%85-%D8%A7%D8%AC%D8%B1%D8%A7%DB%8C%DB%8C-%D8%B3%DA%A9%D8%A7%D9%86-%D8%A2%DA%A9%D8%A7%D8%AF%D9%85%DB%8C">تیم اجرایی</a></div>
+                          <div><a title="شرایط استفاده از خدمات سکان آکادمی" href="/%D8%B4%D8%B1%D8%A7%DB%8C%D8%B7-%D8%A7%D8%B3%D8%AA%D9%81%D8%A7%D8%AF%D9%87-%D8%A7%D8%B2-%D8%AE%D8%AF%D9%85%D8%A7%D8%AA-%D8%B3%DA%A9%D8%A7%D9%86-%D8%A2%DA%A9%D8%A7%D8%AF%D9%85%DB%8C">قوانین سایت</a></div>
+                          <div><a title="داستان های موفقیت کاربران سکان آکادمی" href="/%D8%AF%D8%A7%D8%B3%D8%AA%D8%A7%D9%86-%D9%87%D8%A7%DB%8C-%D9%85%D9%88%D9%81%D9%82%DB%8C%D8%AA-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%A7%D9%86-%D8%B3%DA%A9%D8%A7%D9%86-%D8%A2%DA%A9%D8%A7%D8%AF%D9%85%DB%8C">داستان های موفقیت</a></div>
+                          <div><a title="پروژه های دانشجویان سکان آکادمی" href="/projects">پروژه های دانشجویان</a></div>
+                          <div><a title="سکان آکادمی در رسانه ها" href="/%D8%B3%DA%A9%D8%A7%D9%86-%D8%A2%DA%A9%D8%A7%D8%AF%D9%85%DB%8C-%D8%AF%D8%B1-%D8%B1%D8%B3%D8%A7%D9%86%D9%87-%D9%87%D8%A7">بازتاب در رسانه ها</a></div>
+                          <div><a title="راهنمای استفاده از سایت سکان آکادمی" href="/guide">راهنمای استفاده از سایت</a></div>
+                          <div><a title="ارتباط با مدیریت سکان آکادمی" href="/%D8%A7%D8%B1%D8%AA%D8%A8%D8%A7%D8%B7-%D8%A8%D8%A7-%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA-%D8%B3%DA%A9%D8%A7%D9%86-%D8%A2%DA%A9%D8%A7%D8%AF%D9%85%DB%8C">ارتباط با ما</a></div>
+                          <div><a title="اخبار سکان آکادمی" href="/blog/category/%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1">اخبار سکان آکادمی</a></div>
+                      </div>
+                      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 center-block">
+                          <h4 class="footer-linkes-title"><a title="خدمات سکان آکادمی" href="/%D8%AE%D8%AF%D9%85%D8%A7%D8%AA-%D8%B3%DA%A9%D8%A7%D9%86-%D8%A2%DA%A9%D8%A7%D8%AF%D9%85%DB%8C">خدمات سکان آکادمی</a></h4>
+                          <div><a title="دوره های آموزشی" href="/courses">دوره های آموزشی</a></div>
+                          <div><a title="آموزش ترفندهای برنامه نویسی و طراحی سایت" href="/how-to">آموزش ترفند</a></div>
+                          <div><a title="وبلاگ :: آخرین مقالات طراحی سایت، برنامه نویسی و سئو" href="/blog">وبلاگ</a></div>
+                          <div><a title="ویکی :: دانشنامه ی زبان های برنامه نویسی" href="/wiki">ویکی</a></div>
+                          <div><a title="جابز :: استخدام برنامه نویس" href="/jobs">جابز</a></div>
+                          <div><a title="تالار گفتگوی برنامه نویسی سکان آکادمی" href="/forum">تالار گفتگو</a></div>
+                          <div><a title="پادکست های سکان آکادمی" href="/podcast">پادکست</a></div>
+<!--                           <div><a title="ای پی آی سکان آکادمی" href="/api">API سکان آکادمی</a></div> -->
+<!--                           <div><a title="واژه نامه" href="/glossary">واژه نامه ی برنامه نویسی</a></div> -->
+                      </div>
+                      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 center-block">
+                          <h4 class="footer-linkes-title"><a title="آموزش برنامه نویسی" href="/categories">دوره های آموزش آنلاین</a></h4>
+                          <div><a title="آموزش برنامه نویسی به کودکان" href="/categories/programming/scratch">آموزش برنامه نویسی به کودکان</a></div>
+                          <div><a title="آموزش طراحی سایت به کودکان" href="/categories/web-development/kids-web-design">آموزش طراحی سایت به کودکان</a></div>
+                          <div><a 
+                          title="آموزش برنامه نویسی" 
+                          href="/categories/programming/coding/آموزش-برنامه-نویسی"
+                          >آموزش برنامه نویسی</a></div>
+                          <div><a title="آموزش زبان پی اچ پی" href="/categories/programming/php">آموزش زبان پی اچ پی</a></div>
+                          <div><a title="آموزش زبان جاوا" href="/categories/programming/java">آموزش زبان جاوا</a></div>
+                          <div><a title="آموزش برنامه نویسی اندروید" href="/categories/programming/android">آموزش برنامه نویسی اندروید</a></div>
+                          <div><a title="آموزش زبان پایتون" href="/categories/programming/python">آموزش زبان پایتون</a></div>
+                          <div><a title="آموزش زبان جاوا اسکریپت" href="/categories/programming/javascript">آموزش زبان جاوا اسکریپت</a></div>
+                          <div><a title="آموزش سئو و بهینه سازی سایت" href="/categories/web-development/seo">آموزش سئو</a></div>
+                          <div><a title="آموزش برکتس" href="/categories/web-development/brackets">آموزش برکتس</a></div>
+                          <div><a title=" آموزش ۹۷ چیزی که هر برنامه نویسی باید بداند" href="/categories/programming/ninety-seven-things-every-programmer-should-know">97 چیزی که هر برنامه نویسی باید بداند</a></div>
+                          <div><a title=" آموزش مقدماتی لینوکس" href="/categories/operating-system/linux">آموزش مقدماتی لینوکس</a></div>
+                      </div>
+                      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 center-block">
+                          <h4 class="footer-linkes-title"><a alt="وبلاگ سکان آکادمی" href="/blog">وبلاگ سکان آکادمی</a></h4>
+                          <div><a title="مقالات مرتبط با برنامه نویسی در وبلاگ سکان آکادمی" href="http://www.sokanacademy.com/blog/category/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C">برنامه نویسی</a></div>
+                          <div><a title="مقالات مرتبط با طراحی سایت در وبلاگ سکان آکادمی" href="http://www.sokanacademy.com/blog/category/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D8%B3%D8%A7%DB%8C%D8%AA">طراحی سایت</a></div>
+                          <div><a title="مقالات مرتبط با موبایل در وبلاگ سکان آکادمی" href="http://www.sokanacademy.com/blog/category/%D9%85%D9%88%D8%A8%D8%A7%DB%8C%D9%84">موبایل</a></div>
+                          <div><a title="مقالات مرتبط با هک و امنیت در وبلاگ سکان آکادمی" href="http://www.sokanacademy.com/blog/category/%D9%87%DA%A9-%D9%88-%D8%A7%D9%85%D9%86%DB%8C%D8%AA">هک و امنیت</a></div>
+                          <div><a title="مقالات مرتبط با اپن سورس و لینوکس در وبلاگ سکان آکادمی" href="http://www.sokanacademy.com/blog/category/%D8%A7%D9%BE%D9%86-%D8%B3%D9%88%D8%B1%D8%B3-%D9%88-%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3">اپن سورس و لینوکس</a></div>
+                          <div><a title="مقالات مرتبط با استارتاپ ها در وبلاگ سکان آکادمی" href="http://www.sokanacademy.com/blog/category/%D8%A7%D8%B3%D8%AA%D8%A7%D8%B1%D8%AA%D8%A7%D9%BE-%D9%88-%DA%A9%D8%B3%D8%A8-%D9%88-%DA%A9%D8%A7%D8%B1">استارتاپ و کسب و کار</a></div>
+                          <div><a title="مقالات مرتبط با شبکه های اجتماعی در وبلاگ سکان آکادمی" href="http://www.sokanacademy.com/blog/category/%D8%B4%D8%A8%DA%A9%D9%87-%D9%87%D8%A7%DB%8C-%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%DB%8C">شبکه های اجتماعی</a></div>
+                          <div><a title="مقالات مرتبط با اینترنت اشیاء در وبلاگ سکان آکادمی" href="http://www.sokanacademy.com/blog/category/%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA-%D8%A7%D8%B4%DB%8C%D8%A7%D8%A1">اینترنت اشیاء</a></div>
+                          <div><a title="مقالات مرتبط با سئو و بهینه سازی سایت برای موتورهای جستجو در وبلاگ سکان آکادمی" href="http://www.sokanacademy.com/blog/category/%D8%B3%D8%A6%D9%88">سئو</a></div>
+                          <div><a title="مقالات مرتبط با تجربه ی کاربری در وبلاگ سکان آکادمی" href="http://www.sokanacademy.com/blog/category/%D8%AA%D8%AC%D8%B1%D8%A8%D9%87-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%DB%8C">تجربه ی کاربری</a></div>
+                          <div><a title="مقالات مرتبط با چهرهای معروف فناوری در وبلاگ سکان آکادمی" href="http://www.sokanacademy.com/blog/category/%DA%86%D9%87%D8%B1%D9%87-%D9%87%D8%A7">چهره ها</a></div>
+                          <div><a title="مقالات متفرقه وبلاگ سکان آکادمی" href="http://www.sokanacademy.com/blog/category/%D9%85%D8%AA%D9%81%D8%B1%D9%82%D9%87">متفرقه</a></div>
+                          <div><a title="فید خوان وبلاگ سکان آکادمی" href="http://www.sokanacademy.com/blog/feed" target="_blank">فید وبلاگ</a></div>
+                      </div>
+                      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 center-block">
+                          <h4 class="footer-linkes-title"><a title="استخدام برنامه نویس" href="/jobs">استخدام برنامه نویس</a></h4>
+                          <div><a title="شرکت های جویای برنامه نویس" href="/jobs/companies"> شرکت های جویای برنامه نویس</a></div>
+                          <div><a title="فرصت های شغلی برنامه نویسی" href="/jobs/job-vacancies"> فرصت های شغلی برنامه نویسی</a></div>
+                      </div>
+                      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 center-block">
+                          <h4>در شبکه های اجتماعی</h4>
+                          <div><a href="https://www.linkedin.com/company/sokan-academy" title="پروفایل رسمی سکان آکادمی در شبکه ی اجتماعی لینکدین" rel="nofollow" target="_blank">سکان آکادمی در لینکدین</a></div>
+                      	  <div><a href="http://telegram.me/sokanacademy" title="پروفایل رسمی سکان آکادمی در شبکه ی اجتماعی تلگرام" rel="nofollow" target="_blank">سکان آکادمی در تلگرام</a></div> 	
+                      	  <div><a href="https://twitter.com/SokanAcademy" title="پروفایل رسمی سکان آکادمی در شبکه ی اجتماعی توییتر" rel="nofollow" target="_blank">سکان آکادمی در توییتر</a></div> 	
+                      	  <br>
+                      	  <a class="btn btn-success" title="تبلیغات در سکان آکادمی" href="/%D8%AA%D8%A8%D9%84%DB%8C%D8%BA%D8%A7%D8%AA-%D8%AF%D8%B1-%D8%B3%DA%A9%D8%A7%D9%86-%D8%A2%DA%A9%D8%A7%D8%AF%D9%85%DB%8C">تبلیغات در سکان</a>
+                      </div>
+                  </div>
+                  <div class="row" id="parspackText">میزبانی شده روی سرورهای قدرتمند <strong><a href="http://parspack.com/" rel="nofollow" target="_blank">پارس پک</a></strong></div>
+                  <div class="row" id="copyright">کلیه حقوق متعلق به گروه دانش بنیان سکان آکادمی است &copy;۱۳۹۵-۱۳۹۲</div>
+                </div><!-- end of footer container -->
+            </div>
+        </footer><!-- End of Footer -->
+        <script>
+	        (function(i, s, o, g, r, a, m) {
+	                            i['GoogleAnalyticsObject'] = r;
+	                            i[r] = i[r] || function() {
+	                                                (i[r].q = i[r].q || []).push(arguments)
+	                            }, i[r].l = 1 * new Date();
+	                            a = s.createElement(o),
+	                                                m = s.getElementsByTagName(o)[0];
+	                            a.async = 1;
+	                            a.src = g;
+	                            m.parentNode.insertBefore(a, m)
+	        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+	        ga('create', 'UA-44076062-1', 'sokanacademy.com');
+	        ga('send', 'pageview');
+
+			//like-dislike plugin	
+			$('.button-vote').click(function(){
+				var like = $(this).hasClass('like') ? 1 : 0;
+				var entityId = $(this).data('entityid');
+				var entityType = $(this).data('entitytype');
+
+				$('.yellow', $('#likes-wrapper-' + entityId).parent().parent()).removeClass('disabled');
+				$('.yellow', $('#likes-wrapper-' + entityId).parent().parent()).removeClass('yellow');
+				$('#loading-gif').show();
+				$.ajax({
+					method:'post',
+					url:'/plugins/like-dislike/index/add', 
+					data:{
+						like: like,
+						entity_id: entityId,
+						entity_type: entityType,
+					}, 
+					success:function(data) {
+						$('#loading-gif').css("display", "none");
+						if (data) {
+							var updatedResults = JSON.parse(data);
+							var likeCount = updatedResults['likes'];
+							var id = updatedResults['id'];
+							var dislikeCount = updatedResults['dislikes'];
+							$('#likes-wrapper-' + id).html(likeCount);
+							$('#dislikes-wrapper-' + id).html(dislikeCount);
+							if (like == 1) {
+								$('#likes-wrapper-' + id).parent().addClass('yellow');
+								$('#likes-wrapper-' + id).parent().addClass('disabled');
+							} else {
+								$('#dislikes-wrapper-' + id).parent().addClass('yellow');
+								$('#dislikes-wrapper-' + id).parent().addClass('disabled');
+							}
+						}
+					}
+				});
+			});
+		</script>
+        
+        <!--[if lt IE 9]><script type="text/javascript" src="/js/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="/js/respond.min.js"></script><![endif]-->
+<script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>        <script src="/js/material/ripples.min.js"></script>
+        <script src="/js/material/material.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $.material.init(); // This command is used to initialize some elements and make them work properly
+            });
+        </script>
+    </body>
+</html>

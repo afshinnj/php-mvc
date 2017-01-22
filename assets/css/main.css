@@ -1,0 +1,40 @@
+/* Stylesheet / CSS */
+
+
+/* Many base styles are set in base.css, part of the skeleton framework
+----------------------------------------------------------------------------------------------------*/
+@font-face {
+	font-family: 'IRANSans';
+	src: url('fonts/IRANSansWeb.eot');
+	src: url('fonts/IRANSansWeb.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('fonts/IRANSansWeb.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('fonts/IRANSansWeb.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'IRANSansNums';
+	src: url('fonts/IRANSansWeb(FaNum).eot');
+	src: url('fonts/IRANSansWeb(FaNum).woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('fonts/IRANSansWeb(FaNum).woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('fonts/IRANSansWeb(FaNum).ttf') format('truetype');
+}
+body{
+    background-color: #F0EFF0;
+    font-family: IRANSansNums, Arial, Helvetica, sans-serif;
+}
+.container{
+  /*background-color: #F8F8F8;*/
+  border-radius: 5px;
+  padding: 5px;
+}
+.add{
+  color: black !important;
+  text-decoration: none !important;
+
+}
+.add:hover{
+  color: red !important;
+
+}
+.valid{
+	color: red !important;
+}
