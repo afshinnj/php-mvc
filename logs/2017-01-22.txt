@@ -1,2 +1,0 @@
-Time : 19:43:05
-Not a valid object'PDO_Driver'to load.

@@ -28,7 +28,7 @@ public $layoutFile = ADMIN;
     public function actionHelp() {
         UserAuth::Auth('admin', 'login');
 
-        $this->render('index', ['a' => 'neda joon*100']);
+        $this->render('index', ['a' => 'test']);
     }
 
     public function actionForbidden() {
