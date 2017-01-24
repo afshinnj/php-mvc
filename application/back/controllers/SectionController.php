@@ -23,7 +23,7 @@ class SectionController extends Controller {
 
     public function actionIndex() {
       $section = new SectionModel();
-      $find = $section->find()->fetchAll();
+      $find = $section->find()->All();
       $this->render('index',['find' => $find]);
     }
 
@@ -43,7 +43,7 @@ class SectionController extends Controller {
     public function actionEdit(){
         $id = Input::post('id');
         $section = new SectionModel();
-        $find = $section->find()->where(['id'=>$id])->fetchOne();
+        $find = $section->find()->where(['id'=>$id])->One();
         if (Valid::$errors == FALSE) {
           $section->title = Input::post('title');
           $section->update(Input::post('id'));

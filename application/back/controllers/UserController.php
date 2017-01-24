@@ -23,7 +23,7 @@ class UserController extends Controller {
     public function actionIndex() {
 
         $user = new UserModel();
-        $users = $user->find()->order('id', 'DESC')->fetchAll();
+        $users = $user->find()->order('id', 'DESC')->All();
         $this->render('index', ['users' => $users]);
     }
 

@@ -3,7 +3,7 @@
 class Encryption {
 
     /**
-     * 
+     *
      * @param type $password
      * @return type
      */
@@ -17,7 +17,7 @@ class Encryption {
     }
 
     /**
-     * 
+     *
      * @param type $password
      * @param type $hash
      * @return boolean
@@ -31,7 +31,7 @@ class Encryption {
     }
 
     /**
-     * 
+     *
      * @param type $algorithm
      * @return type
      */
@@ -45,6 +45,8 @@ class Encryption {
         }
         return $string;
     }
+
+
 
     public static function token() {
 

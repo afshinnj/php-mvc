@@ -23,7 +23,7 @@
 
     <div class="form-group">
       <?= Html::getLable('text', 'lable', ['class' => "lable"]);?>
-      <?php echo Html::inputTextarea('text', '', ['class'=>'form-control']) ?>
+      <?php echo Html::inputTextarea('text', '', ['class'=>'form-control', 'id'=>'editor']) ?>
       <p class="help-block valid"><?php echo Valid::error('text'); ?></p>
     </div>
 

@@ -8,6 +8,10 @@
         <link rel="stylesheet" href="<?php echo Base::baseUrl() . 'assets/css/bootstrap/css/bootstrap-rtl.css' ?>">
         <link rel="stylesheet" href="<?php echo Base::baseUrl() . 'assets/css/main.css' ?>">
         <script src="<?php echo Base::baseUrl() . 'assets/js/Angular.js' ?>"></script>
+        <script src="<?php echo Base::baseUrl() . 'assets/ckeditor/adapters/jquery1.js' ?>"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="<?php echo Base::baseUrl() . 'assets/ckeditor/ckeditor.js' ?>"></script>
+
     </head>
     <body>
         <div>
@@ -36,9 +40,39 @@
         </nav>
             <div class="container">
                 <?= $viewDate?>
+
             </div>
+            <p>If you click on the "Hide" button, I will disappear.</p>
 
-
+            <button id="hide">Hide</button>
+            <button id="show">Show</button>
         </div>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("p").hide();
+            });
+            $("#show").click(function(){
+                $("p").show();
+            });
+            $(".returnImage").click("click", function (e) {
+              var urlImage = [yoururlimage];
+              window.opener.$("#cke_" + input_id + "_textInput").val(urlImage);
+          });
+          var urlImage = 'asdasd';
+          window.opener.$("#cke_113_textInput").val(urlImage);
+        });
+        </script>
+        <script type="text/javascript">
+        var editor = CKEDITOR.replace( 'editor', {
+        	//filebrowserBrowseUrl : 'ckfinder/ckfinder.html',
+        	//filebrowserImageBrowseUrl : 'ckfinder/ckfinder.html?type=Images',
+        	filebrowserUploadUrl : 'post/connector?command=QuickUpload&type=Images',
+        	filebrowserImageUploadUrl : 'post/connector?command=QuickUpload&type=Images',
+
+        });
+        CKFinder.setupCKEditor( editor, '../' );
+        </script>
+
     </body>
 </html>
