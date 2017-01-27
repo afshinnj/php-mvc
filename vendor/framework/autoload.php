@@ -6,6 +6,7 @@ set_include_path(get_include_path() . PATH_SEPARATOR . 'vendor/framework/driver/
 set_include_path(get_include_path() . PATH_SEPARATOR . 'vendor/framework/driver');
 set_include_path(get_include_path() . PATH_SEPARATOR . 'vendor/framework/rbac');
 set_include_path(get_include_path() . PATH_SEPARATOR . 'vendor/framework/helpers');
+set_include_path(get_include_path() . PATH_SEPARATOR . 'vendor/framework/widgets');
 /* * * specify extensions that may be loaded ** */
 spl_autoload_extensions('.php');
 

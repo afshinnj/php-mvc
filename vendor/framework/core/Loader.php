@@ -16,7 +16,7 @@ class Loader {
             'Router',
             'Session',
             'Driver',
-            'PDO_Driver',
+            'PDO_Driver',//delete
             'Connect',
             'Encryption',
             'Crud',
@@ -25,6 +25,7 @@ class Loader {
             'UserRole',
             'Logger',
             'Validation',
+            'Widgets',
 
         );
         if (!in_array($object, $valid)) {

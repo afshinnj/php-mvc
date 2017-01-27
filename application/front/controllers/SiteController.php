@@ -7,9 +7,9 @@ class SiteController extends Controller {
     public function actionIndex() {
       //UserAuth::Auth('admin', 'login');
         $post = new PostModel();
-        $this->render('index', array('post' => $post->find()->fetchAll()));
+        $this->render('index', array('post' => $post->find()->order('id',' DESC')->All()));
     }
 
-    
+
 
 }

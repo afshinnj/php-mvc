@@ -34,7 +34,7 @@ class PostController extends Controller {
         $post = new PostModel();
       if (Valid::$errors == FALSE AND !empty($_POST)) {
         $post->title = Input::post('title');
-        $post->text = Input::post('text');
+        $post->text = $_POST['text'];
         $post->section = Input::post('section');
         $post->author = User::get_username();
         $post->tag = Input::post('tag');
@@ -61,7 +61,7 @@ class PostController extends Controller {
         $post = new PostModel();
       if (Valid::$errors == FALSE AND !empty($_POST)) {
         $post->title = Input::post('title');
-        $post->text = Input::post('text');
+        $post->text = $_POST['text'];
         $post->section = Input::post('section');
         $post->author = User::get_username();
         $post->tag = Input::post('tag');
@@ -112,7 +112,7 @@ class PostController extends Controller {
           $uploadOk = 0;
       }
       // Check file size
-      if ($_FILES["upload"]["size"] > 500000) {
+      if ($_FILES["upload"]["size"] > 900000) {
           echo "Sorry, your file is too large.";
           $uploadOk = 0;
       }
