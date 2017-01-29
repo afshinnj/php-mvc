@@ -56,19 +56,37 @@ class Input {
      * @param : index :: index of $_POST request
      * @access public
      */
-    public static function post($index = NULL) {
+    public static function post($index = NULL, $Clean = TRUE) {
         $out = array();
 
-        if ($index === NULL AND ! empty($_POST)) {
-            foreach ($_POST as $key => $val) {
-                $out[$key] = self::clean($val);
+          if($Clean == TRUE){
+            if ($index === NULL AND ! empty($_POST)) {
+                foreach ($_POST as $key => $val) {
+                    $out[$key] = self::clean($val);
+                }
+                return $out;
+            } else {
+                if (!empty($_POST) and isset($_POST[$index])) {
+                    return self::clean($_POST[$index]);
+                }
             }
-            return $out;
-        } else {
-            if (!empty($_POST) and isset($_POST[$index])) {
-                return self::clean($_POST[$index]);
+          }else{
+
+            if ($index === NULL AND ! empty($_POST)) {
+                foreach ($_POST as $key => $val) {
+                    $out[$key] = $val;
+                }
+                return $out;
+            } else {
+                if (!empty($_POST) and isset($_POST[$index])) {
+                    return $_POST[$index];
+                }
             }
-        }
+
+          }
+
+
+
     }
 
     /**

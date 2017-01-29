@@ -119,6 +119,8 @@ class User {
             if (self::get_username() == $username) {
                 $passVerify = Encryption::passVerify($password . self::get_hash(), self::get_pass());
                 if ($passVerify == True) {
+                    //$User_serializ;
+                    //serialize($var);
                     self::set_token();
                     self::set_login();
                     self::expire();

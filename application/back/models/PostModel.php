@@ -1,25 +1,15 @@
 <?php
+class PostModel extends ActiveRecord\Model {
 
-class PostModel extends ActiveRecord {
 
-    public $table = 'post';
-    public $pk = 'id';
+    public static $table_name = 'post';
+    public static $primary_key = 'id';
 
-    public function __construct() {
-        parent::__construct();
+    static $before_save = array('setDate'); # new OR updated records
 
-        Valid::addRole('title', ['type' => 'string', 'required' => true,  'trim' => true]);
-        Valid::addRole('text', ['type' => 'string', 'required' => true,  'trim' => true]);
-        Valid::addRole('section', ['type' => 'string', 'required' => true, 'trim' => true]);
-
-        Html::selLable([
-            'title' => Language::get('Title'),
-            'text' => Language::get('Text'),
-            'section' => Language::get('Section'),
-            'tag' => Language::get('Tag'),
-        ]);
+    public function setDate() {
+         $this->date = jDateTime::date('Y-m-d', false, false);
     }
-
     /**
      *
      * @staticvar type $dropdown
@@ -34,7 +24,7 @@ class PostModel extends ActiveRecord {
 
             $dropdown[] = 'Select';//Yii::t('fa-IR','Select');
             foreach ($item as $model) {
-                $dropdown[$model['id']] = $model['title'];
+                $dropdown[$model->id] = $model->title;
             }
         }
 

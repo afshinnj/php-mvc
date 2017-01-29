@@ -94,7 +94,7 @@ class Valid{
         $required = self::$source[$var];
         if (empty($required)) {
             self::$errors = TRUE;
-            $_COOKIE['valid_'.$var] =  Langs::get($var) .' '. Langs::get('not empty');
+            $_COOKIE['valid_'.$var] =  Language::get($var) .' '. Language::get('not empty');
         } else {
             // $_COOKIE['valid_'.$var] = '';
         }
@@ -113,13 +113,13 @@ class Valid{
         if (isset(self::$source[$var])) {
             if (strlen(self::$source[$var]) < $min) {
                 self::$errors = TRUE;
-                $_COOKIE['valid_'.$var] = Langs::get($var) .' '. Langs::get('is too short');
+                $_COOKIE['valid_'.$var] = Language::get($var) .' '. Language::get('is too short');
             } elseif (strlen(self::$source[$var]) > $max) {
                 self::$errors = TRUE;
-                $_COOKIE['valid_'.$var] = Langs::get($var) .' '. Langs::get('is too long');
+                $_COOKIE['valid_'.$var] = Language::get($var) .' '. Language::get('is too long');
             } elseif (!is_string(self::$source[$var])) {
                 self::$errors = TRUE;
-                $_COOKIE['valid_'.$var] = Langs::get($var) .' '. Langs::get('is invalid');
+                $_COOKIE['valid_'.$var] = Language::get($var) .' '. Language::get('is invalid');
             } else {
                 $_COOKIE['valid_'.$var] = '';
             }
@@ -137,13 +137,13 @@ class Valid{
 
         if (strlen(self::$source[$var]) > $max) {
             self::$errors = TRUE;
-            $_COOKIE['valid_'.$var] = Langs::get($var) .' '. Langs::get('is too short');
+            $_COOKIE['valid_'.$var] = Language::get($var) .' '. Language::get('is too short');
         } elseif (strlen(self::$source[$var]) < $min) {
             self::$errors = TRUE;
-            $_COOKIE['valid_'.$var] = Langs::get($var) .' '. Langs::get('is too long');
+            $_COOKIE['valid_'.$var] = Language::get($var) .' '. Language::get('is too long');
         } elseif (filter_var(self::$source[$var], FILTER_VALIDATE_INT) === FALSE) {
             self::$errors = TRUE;
-            $_COOKIE['valid_'.$var] = Langs::get($var) .' '. Langs::get('is an invalid number');
+            $_COOKIE['valid_'.$var] = Language::get($var) .' '. Language::get('is an invalid number');
         } else {
             $_COOKIE['valid_'.$var] = '';
         }
@@ -158,7 +158,7 @@ class Valid{
 
         if (filter_var(self::$source[$var], FILTER_VALIDATE_URL) === FALSE) {
             self::$errors = TRUE;
-            $_COOKIE['valid_'.$var] = Langs::get($var) .' '. Langs::get('is not a valid URL');
+            $_COOKIE['valid_'.$var] = Language::get($var) .' '. Language::get('is not a valid URL');
         } else {
             $_COOKIE['valid_'.$var] = '';
         }
@@ -173,7 +173,7 @@ class Valid{
     private static function validateEmail($var) {
         if (filter_var(self::$source[$var], FILTER_VALIDATE_EMAIL) === FALSE) {
             self::$errors = TRUE;
-            $_COOKIE['valid_'.$var] = Langs::get($var) .' '. Langs::get('is not a valid email address');
+            $_COOKIE['valid_'.$var] = Language::get($var) .' '. Language::get('is not a valid email address');
         } else {
             $_COOKIE['valid_'.$var] = '';
         }
@@ -200,7 +200,7 @@ class Valid{
 
         if ($a != $b) {
             self::$errors = TRUE;
-            $_COOKIE['valid_'.$var] = Langs::get($var) .' '. Langs::get('is not compare');
+            $_COOKIE['valid_'.$var] = Language::get($var) .' '. Language::get('is not compare');
         }
     }
 
@@ -212,7 +212,7 @@ class Valid{
     public static function unique($var, $unique){
 
         if($unique == true){
-            $_COOKIE['valid_'.$var] =Langs::get($var) .' '. Langs::get('not unique');
+            $_COOKIE['valid_'.$var] =Language::get($var) .' '. Language::get('not unique');
             self::$errors = TRUE;
         } else {
             $_COOKIE['valid_'.$var] = '';

@@ -5,7 +5,7 @@ class AccessControl {
     public static $redirect = 'login';
 
     public function __construct() {
-        
+
     }
 
     public static function access($access) {
@@ -25,9 +25,10 @@ class AccessControl {
             header('Location: ' . Base::siteUrl(403), TRUE);
         }
 
+
         if (isset($UserRole)) {
             $action = $access[$UserRole]['actions'];
-           
+
             $onearr = array_combine(range(1, count($action)), $action);
 
             $index = array_search($getAction, $onearr);
@@ -55,7 +56,7 @@ class AccessControl {
     }
 
     /**
-     * 
+     *
      * @param type $auth
      * @param type $uri
      * @return boolean
@@ -67,7 +68,7 @@ class AccessControl {
         }
 
 
-        if (isset($_SESSION['User_Id'])) {
+        if (isset($_SESSION['User_Id']) AND !empty($_SESSION['User_Id'])) {
 
             User::expire($_SESSION['User_Id']);
 

@@ -24,7 +24,7 @@
     <div class="form-group">
       <?= Html::getLable('text', 'lable', ['class' => "lable"]);?>
       <?php //Html::inputTextarea('text', '', ['class'=>'form-control', 'id'=>'editor']) ?>
-      <?= Widgets::CKEditor();?>
+      <?= Ckeditor::editor();?>
       <p class="help-block valid"><?php echo Valid::error('text'); ?></p>
     </div>
 

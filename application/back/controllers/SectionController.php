@@ -19,6 +19,12 @@ class SectionController extends Controller {
                     ]
                 ]
         );
+
+        Valid::addRole('title', ['type' => 'string', 'required' => true,  'trim' => true]);
+
+        Html::selLable([
+            'title' => Language::get('Title'),
+        ]);
     }
 
     public function actionIndex() {

@@ -23,7 +23,7 @@
 
     <div class="form-group">
       <?= Html::getLable('text', 'lable', ['class' => "lable"]);?>
-      <?= Widgets::CKEditor($find['text']);?>
+      <?= Ckeditor::editor($find['text']);?>
       <p class="help-block valid"><?php echo Valid::error('text'); ?></p>
     </div>
 

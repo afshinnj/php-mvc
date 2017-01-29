@@ -16,7 +16,7 @@ class Loader {
             'Router',
             'Session',
             'Driver',
-            'PDO_Driver',//delete
+            'PDO_Driver',//rbac User
             'Connect',
             'Encryption',
             'Crud',
@@ -25,12 +25,13 @@ class Loader {
             'UserRole',
             'Logger',
             'Validation',
-            'Widgets',
+            //'Widgets',
 
         );
         if (!in_array($object, $valid)) {
 
             //$config = self::load('Configs');
+            echo "Not a valid object' {$object} 'to load.";
             throw new Exception("Not a valid object'{$object}'to load.");
         }
         if (empty(self::$loaded[$object])) {

@@ -18,7 +18,7 @@ class LoginController extends Controller {
             if ($a) {
                 $this->redirect('admin');
             } else {
-              Message::set('User_Not_Find', Langs::get('User Not Find'));
+              Message::set('User_Not_Find', Language::get('User Not Find'));
 
             }
         }

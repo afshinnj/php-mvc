@@ -14,9 +14,9 @@
        </thead>
        <?php foreach ($find as $row) :?>
          <tr>
-           <td><?= $row['title'] ?></td>
-           <td><?= Html::PostSubmit('edit',' ویرایش',['class'=>'btn btn-primary'],'postEdit',['id'=>$row['id']]);?></td>
-           <td><?= Html::PostSubmit('delete','حذف',['class'=>'btn btn-danger'],'postDelete',['id'=>$row['id']]);?></td>
+           <td><?= $row->title ?></td>
+           <td><?= Html::PostSubmit('edit',' ویرایش',['class'=>'btn btn-primary'],'postEdit',['id'=>$row->id]);?></td>
+           <td><?= Html::PostSubmit('delete','حذف',['class'=>'btn btn-danger'],'postDelete',['id'=>$row->id]);?></td>
          </tr>
        <?php endforeach?>
      </table>
