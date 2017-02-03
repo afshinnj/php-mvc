@@ -1,0 +1,26 @@
+Time : 20:21:29
+Controller 'Uploads' not found.
+
+Time : 20:19:02
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'PRIMARY' in /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Connection.php:310
+Stack trace:
+#0 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Connection.php(310): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Table.php(327): ActiveRecord\Connection->query('INSERT INTO `se...', Array)
+#2 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Model.php(822): ActiveRecord\Table->insert(Array)
+#3 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Model.php(777): ActiveRecord\Model->insert(true)
+#4 /opt/lampp/htdocs/mvc/vendor/framework/session/Session.php(47): ActiveRecord\Model->save()
+#5 /opt/lampp/htdocs/mvc/vendor/framework/core/Loader.php(37): Session->__construct()
+#6 /opt/lampp/htdocs/mvc/index.php(16): Loader::load('Session')
+#7 {main}
+
+Time : 20:14:58
+Couldn't find SessionModel with ID=h7q69b2h6200jqsc9sliou4vi1
+
+Time : 20:14:39
+Couldn't find SessionModel with ID=h7q69b2h6200jqsc9sliou4vi1
+
+Time : 20:13:52
+Couldn't find SessionModel with ID=h7q69b2h6200jqsc9sliou4vi1
+
+Time : 20:08:00
+Couldn't find SessionModel with ID=h7q69b2h6200jqsc9sliou4vi1

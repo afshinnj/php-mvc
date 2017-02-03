@@ -15,7 +15,6 @@ class Loader {
             'Language',
             'Router',
             'Session',
-            'Driver',
             'PDO_Driver',//rbac User
             'Connect',
             'Encryption',

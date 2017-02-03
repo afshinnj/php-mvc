@@ -17,7 +17,7 @@ class User {
     }
 
     private function _createTable() {
-        Driver::Query("
+        UserModel::Query("
                     CREATE TABLE IF NOT EXISTS `user` (
                       `id` int(11) NOT NULL AUTO_INCREMENT,
                       `token` char(32) NOT NULL,
@@ -77,7 +77,7 @@ class User {
         $_SESSION['token'] = $token;
 
         $sess_id = session_id();
-        Driver::Query("UPDATE `$config->sessTable` SET `token` = '{$token}' WHERE id = '{$sess_id}'");
+        UserModel::Query("UPDATE `$config->sessTable` SET `token` = '{$token}' WHERE id = '{$sess_id}'");
     }
 
     public static function get_token($username) {
@@ -156,7 +156,7 @@ class User {
             $_SESSION['User_Id'] = $lastInsertId;
             self::data($lastInsertId, ['active' => '0', 'activeCode' => $token]);
             $sess_id = session_id();
-            Driver::Query("UPDATE `$config->sessTable` SET `token` = '{$token}' WHERE id = '{$sess_id}'");
+            UserModel::Query("UPDATE `$config->sessTable` SET `token` = '{$token}' WHERE id = '{$sess_id}'");
 
             if (isset($lastInsertId) and ! empty($lastInsertId)) {
                 Message::set('UserRegisterSuccess', 'ok');

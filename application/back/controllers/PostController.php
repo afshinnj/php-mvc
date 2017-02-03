@@ -12,7 +12,7 @@ class PostController extends Controller {
         AccessControl::access(
                 [
                     'user' => [
-                        'actions' => ['index','insert','edit','delete','update','connector'],
+                        'actions' => ['index','insert','edit','delete','update','finder'],
                         'redirect' => 'login',
                     ],
                     '?' => [
@@ -36,8 +36,6 @@ class PostController extends Controller {
     }
 
     public function actionIndex() {
-
-
        $this->render('index',['find' => PostModel::find('all', ['order' => 'id desc'])]);
     }
 
@@ -76,7 +74,6 @@ class PostController extends Controller {
         $post->section = Input::post('section');
         $post->author = User::get_username();
         $post->tag = Input::post('tag');
-        $post->date = jDateTime::date('Y-m-d', false, false);
         $post->update(Input::post('id'));
         Message::set('Success',Language::get('Text saved successfully'));
         $this->redirect('post');
@@ -90,23 +87,18 @@ class PostController extends Controller {
     public function actionDelete(){
 
         $id = (int) Input::post('id');
-        $post = new PostModel();
-        $post->delete($id);
-        $this->redirect('post');
-    }
-
-    public function ActionHello(){
-        echo 'hello';
-
+        //$post = new PostModel();
+        //$post = PostModel::find($id);
+        //$post->delete();
+        //PostModel::table()->delete(array('id'=>$id));
+        PostModel::delete_all(array('conditions' => 'id > "100"'));
     }
     /**
     *
     *
     */
-    public function ActionConnector(){
-
-
-
+    public function ActionFinder(){
+        Ckfinder::view();
     }///end Action
 
 }

@@ -17,3 +17,25 @@ $route = array(
     'sectionUpdate' =>'section/update',
     'sectionDelete' =>'section/delete',
 );
+
+/*$route = [
+      'test'=>[
+        'index'=>'index',
+        'index'=>'index',
+        'index'=>'index',
+        'index'=>'index',
+      ],
+      'test2'=>[
+        'index'=>'index',
+        'index'=>'index',
+        'index'=>'index',
+        'index'=>'index',
+      ],
+      'test3'=>[
+        'index'=>'index',
+        'index'=>'index',
+        'index'=>'index',
+        'index'=>'index',
+      ],
+
+];*/

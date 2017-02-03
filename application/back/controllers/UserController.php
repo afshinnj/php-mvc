@@ -22,9 +22,11 @@ class UserController extends Controller {
 
     public function actionIndex() {
 
-        $user = new UserModel();
+        /*$user = new UserModel();
         $users = $user->find()->order('id', 'DESC')->All();
-        $this->render('index', ['users' => $users]);
+        $this->render('index', ['users' => $users]);*/
+        User::logout();
+        $this->redirect('login');
     }
 
     public function actionDelete() {
