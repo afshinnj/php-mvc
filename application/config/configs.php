@@ -8,6 +8,7 @@ $configs['dbUsername'] = 'root';
 $configs['dbPassword'] = '';
 $configs['dbName'] = 'blog';
 
+
 ActiveRecord\Config::initialize(function($cfg)
 {
    //$cfg->set_model_directory('models');

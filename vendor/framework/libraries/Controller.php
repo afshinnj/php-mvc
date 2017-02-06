@@ -8,13 +8,7 @@ class Controller {
 
     public function __construct() {
 
-
     }
-
-    public function action() {
-
-    }
-
     /**
      *
      * @param type $paramName
@@ -39,13 +33,10 @@ class Controller {
     protected function loadView($view, $values = array(), $useLayout = false) {
         extract($values);
         $controller = substr(strtolower(get_class($this)), 0, -10);
-        $viewFile = ADMIN . "/views/{$controller}/{$view}.php";
-        if (!file_exists($viewFile)) {
-            $viewFile = FRONT . "/views/{$controller}/{$view}.php";
+            $viewFile = $this->layoutFile . "/views/{$controller}/{$view}.php";
             if (!file_exists($viewFile)) {
                 throw new Exception("View '{$view}.php' was not found in 'views/{$controller}' directory.");
             }
-        }
         ob_start();
         require_once $viewFile;
         $viewDate = ob_get_clean();

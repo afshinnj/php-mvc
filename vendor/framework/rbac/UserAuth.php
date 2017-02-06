@@ -3,8 +3,32 @@
 class UserAuth {
 
     public function __construct() {
-        
+
     }
+
+    /**
+    *
+    *   check user token
+    */
+
+    public static function Token($uri) {
+
+        if (!preg_match('#^(\w+:)?//#i', $uri)) {
+            $uri = Base::siteUrl($uri);
+        }
+
+
+        if (isset($_SESSION['user_id'])) {
+              if(User::get_token() != $_SESSION['UserToken']){
+                  header('Location: ' . $uri, TRUE);
+              }
+        } else {
+            header('Location: ' . $uri, TRUE);
+        }
+    }
+
+
+
 
     public static function Auth($auth, $uri) {
 

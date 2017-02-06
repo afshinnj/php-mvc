@@ -11,7 +11,6 @@
     <body>
 
     <div class="container">
-
       <?php echo Html::form_open('login', ['name' => 'Login Page','class'=>'form-signin'], ['test' => 'test']) ?>
         <h4 class="form-signin-heading">لطفا وارد شوید.</h4>
         <div class="lable"><?php echo Html::getLable('username', 'lable', ['class' => "sr-only" , 'for' =>'username']); ?></div>

@@ -14,7 +14,7 @@
     <script>
     $(document).ready(function(){
         $("img").click(function(){
-          var src = $(this).attr('src');
+          var src = $(this).attr('url');
             window.top.opener.CKEDITOR.tools.callFunction( 1, src);
             window.top.close() ;
     	      window.top.opener.focus() ;
@@ -29,8 +29,7 @@
           $directory = 'uploads';
           $scanned_directory = array_diff(scandir($directory), array('..', '.'));
           foreach ($scanned_directory as $key ):?>
-
-            <img  src="<?= Base::baseUrl()?>uploads/<?= $key?>" alt="" class="img-rounded" width="200">
+            <img  src="<?= Base::baseUrl()?>uploads/<?= $key?>" url="uploads/<?= $key?>" alt="" class="img-rounded" width="200">
           <?php endforeach?>
         </div>
   </body>

@@ -7,7 +7,7 @@ class Encryption {
      * @param type $password
      * @return type
      */
-    public static function passHash($password) {
+    public static function password_hash($password) {
         $options = [
             'cost' => 12,
             'salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM),
@@ -22,7 +22,7 @@ class Encryption {
      * @param type $hash
      * @return boolean
      */
-    public static function passVerify($password, $hash) {
+    public static function password_verify($password, $hash) {
         if (password_verify($password, $hash)) {
             return true;
         } else {

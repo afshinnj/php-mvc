@@ -1,9 +1,7 @@
 <?php
 
-class UserModel extends ActiveRecord {
+class UserModel{
 
-    public $table = 'user';
-    public $pk = 'token';
 
     public function __construct() {
         parent::__construct();
@@ -11,6 +9,7 @@ class UserModel extends ActiveRecord {
         Valid::addRole('username', ['type' => 'string', 'required' => true, 'min' => 3, 'max' => 10, 'trim' => true,'unique' => User::unique(['username' => Input::post('username')])]);
         Valid::addRole('password', ['type' => 'string', 'required' => true, 'min' => 5, 'max' => 10, 'trim' => true, 'compare' => true]);
         Valid::addRole('password_compare', ['type' => 'string', 'required' => true, 'min' => 5, 'max' => 10, 'trim' => true]);
+        
         Html::selLable([
             'username' => Language::get('username'),
             'password' => Language::get('password'),

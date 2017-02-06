@@ -1,7 +1,7 @@
 <?php
 
 class LoginController extends Controller {
-
+public $layoutFile = ADMIN;
     public function __construct() {
         parent::__construct();
         new Login();
@@ -10,11 +10,9 @@ class LoginController extends Controller {
     public function actionIndex() {
         $_SESSION['lang'] = 'fa-IR';
         $msg = null;
-
-        ///echo User::login(Input::post('username'), Input::post('password'));
-
-        if (Valid::$errors == FALSE and ! empty($_POST)) {
-            $a = User::login(Input::post('username'), Input::post('password'));
+        $a = User::signIn();
+        if (Valid::$errors == FALSE) {
+            $a = User::signIn();
             if ($a) {
                 $this->redirect('admin');
             } else {

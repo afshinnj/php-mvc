@@ -1,6 +1,4 @@
-<?php echo $a?>
-sdfsf
-<form action="<?php echo Base::siteUrl('afshin')?>" method="post">
+<form action="<?php echo Base::siteUrl('site/enter')?>" method="post">
     <input type="text" name="username">
     <br>
     <input type="text" name="password">

@@ -15,8 +15,6 @@ class Loader {
             'Language',
             'Router',
             'Session',
-            'Driver',
-            'PDO_Driver',//rbac User
             'Connect',
             'Encryption',
             'Crud',
@@ -25,7 +23,6 @@ class Loader {
             'UserRole',
             'Logger',
             'Validation',
-            //'Widgets',
 
         );
         if (!in_array($object, $valid)) {

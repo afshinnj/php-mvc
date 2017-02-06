@@ -4,43 +4,37 @@ class Session {
     public $autoCreateSessionTable = true;
     public $expire; // 20 minutes
     public $autoStart = true;
-    /**
-     * Create the session table
-     */
-    private function _createTable() {
-        Driver::Query("
-            CREATE TABLE IF NOT EXISTS `{$this->sessionTable}` (
-                `id` char(32) COLLATE utf8_bin NOT NULL,
-                `expire` int(11) DEFAULT NULL,
-                `data` longblob,
-                `token` char(32) COLLATE utf8_bin NOT NULL,
-                PRIMARY KEY (`id`)
-            ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8
-        ");
-    }
+
     /**
      * Deletes expired session
      */
     private function _deleteExpired() {
         $expire = time();
-        Driver::Query("DELETE FROM '{$this->sessionTable}` WHERE (`expire`<'{$expire}')");
-       
+        SessionModel::delete_all(array('conditions' => 'expire < "'.$expire.'"'));
     }
     /**
      * Constructor
      */
-    public function __construct($autoStart = true) {
+    public function __construct() {
+      ini_set('session.save_handler', 'user');
+
        Loader::load('Configs');
        $this->expire = Configs::get('sessExpire') + 1200;
-      
        $this->sessionTable = Configs::get('sessTable');
-        ini_set('session.save_handler', 'user');
-        $this->autoStart = $autoStart;
-        if ($this->autoStart) {
-            $this->start();
+       $this->start();
+
+      register_shutdown_function(array($this, 'sessionClose'));
+
+      $sess = SessionModel::find('all', array('conditions' => array('id = ?', session_id())));
+      if($sess == NULL){
+        $expire = time() + $this->expire;
+        $insert = new SessionModel();
+        $insert->id = session_id();
+        $insert->expire = $expire;
+        $insert->save();
         }
-       //$this->checkSession();
-        register_shutdown_function(array($this, 'sessionClose'));
+
+
     }
     /**
      * Update the current session ID with a newly generated one.
@@ -54,10 +48,15 @@ class Session {
         session_regenerate_id();
         $newId = session_id();
         if (!$deleteOldSession) {
-            Driver::Query("UPDATE `{$this->sessionTable}` SET `id`='{$newId}' WHERE (`id`='{$oldId}')");
+          $update = SessionModel::find($oldId);
+          $update->id = $newId;
+          $update->save();
         } else {
             $expire = time() + $this->expire;
-            Driver::Query("INSERT INTO `{$this->sessionTable}` VALUES ('{$newId}','{$expire}','','')");
+            $insert = new SessionModel();
+            $insert->id = $newId;
+            $insert->expire = $expire;
+            $insert->save();
         }
     }
     /**
@@ -65,12 +64,19 @@ class Session {
      */
     public function start() {
         session_set_save_handler(
-                array($this, 'sessionOpen'), array($this, 'sessionClose'), array($this, 'sessionRead'), array($this, 'sessionWrite'), array($this, 'sessionDestroy'), array($this, 'sessionGC')
+                array($this, 'sessionOpen'),
+                array($this, 'sessionClose'),
+                array($this, 'sessionRead'),
+                array($this, 'sessionWrite'),
+                array($this, 'sessionDestroy'),
+                array($this, 'sessionGC')
         );
         session_start();
+
         if (session_id() == '') {
             throw new Exception('Failed to start session.');
         }
+
     }
     /**
      * Ends the current session and store session data
@@ -89,9 +95,9 @@ class Session {
      * @return boolean whether session is destroyed successfully
      */
     public function sessionDestroy($id) {
-        Driver::Query("DELETE FROM `{$this->sessionTable}` WHERE (`expire`= 0 )");
-        Driver::Query("DELETE FROM `{$this->sessionTable}` WHERE (`id`='{$id}')");
-        return (Driver::AffectedRows() > 0);
+        ///SessionModel::delete_all(array('conditions' => 'expire = "0"'));
+        SessionModel::delete_all(array('conditions' => 'id = "'.$id.'"'));
+        return TRUE;//(Driver::AffectedRows() > 0);
     }
     /**
      * Session GC (garbage collector) handler
@@ -113,9 +119,6 @@ class Session {
     public function sessionOpen($savePath, $sessionName) {
         if ($this->autoCreateSessionTable) {
             $this->_deleteExpired();
-            if (Driver::AffectedRows() < 0) {
-                $this->_createTable();
-            }
         }
         return true;
     }
@@ -127,8 +130,12 @@ class Session {
      */
     public function sessionRead($id) {
         $expire = time();
-        $data = Driver::ArrayQuery("SELECT `data` FROM `{$this->sessionTable}` WHERE (`id`='{$id}' AND `expire`>='{$expire}')");
-        return (count($data) > 0 ? base64_decode($data[0]['data']) : null);
+        $rows = SessionModel::find('all', array('conditions' => array('id = ? AND expire > ?', $id, time())));
+        $data = 0;
+        foreach ($rows as $key => $value) {
+            $data = $value->data;
+        }
+        return (count($data) > 0 ? base64_decode($data) : null);
     }
     /**
      * Session write hanlder
@@ -140,27 +147,7 @@ class Session {
     public function sessionWrite($id, $data) {
         $data = base64_encode($data);
         $expire = time() + $this->expire;
-        Driver::Query("INSERT INTO `{$this->sessionTable}` VALUES ('{$id}','{$data}','{$expire}','') ON DUPLICATE KEY UPDATE `data`='{$data}',`expire`='{$expire}'");
-    }
-    /**
-     * Count online users
-     */
-    public function onlineCount() {
-        $expire = time();
-        $data = Driver::ArrayQuery("SELECT COUNT(*) AS `total` FROM `{$this->sessionTable}` WHERE (`expire`>='{$expire}')");
-        return $data[0]['total'];
-    }
-    public function onlineUsers() {
-        $expire = time();
-        $data = Driver::ArrayQuery("SELECT `data` FROM `{$this->sessionTable}` WHERE (`expire`>='{$expire}')");
-        $users = array();
-        foreach ($data as $item) {
-            $item = base64_decode($item['data']);
-            if (preg_match('#username.*?"(.*?)"#i', $item, $match)) {
-                $users[] = $match[1];
-            }
-        }
-        return $users;
+        SessionModel::Query("INSERT INTO `{$this->sessionTable}` VALUES ('{$id}','{$data}','{$expire}','') ON DUPLICATE KEY UPDATE `data`='{$data}',`expire`='{$expire}'");
     }
 
 }

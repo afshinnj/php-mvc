@@ -70,9 +70,7 @@ class Ckeditor
     var editor = CKEDITOR.replace( 'editor', {
      extraPlugins: 'uploadimage,image2',
      height: 400,
-     filebrowserBrowseUrl : 'ckfinder/ckfinder.html',
-     filebrowserImageBrowseUrl : 'ckfinder/ckfinder.html',
-     filebrowserUploadUrl : 'post/connector?command=QuickUpload&type=Images',
+     filebrowserImageBrowseUrl : '".Router::getController()."/finder',
      filebrowserImageUploadUrl : '".Router::getController()."',
      stylesSet: [
                  { name: 'Narrow image', type: 'widget', widget: 'image', attributes: { 'class': 'image-narrow' } },

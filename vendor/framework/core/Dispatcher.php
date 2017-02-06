@@ -1,10 +1,9 @@
 <?php
 
-class Dispatcher {
+class Dispatcher extends Controller{
 
     public static function dispatch() {
         global $app;
-
 
         $controller = Router::getController();
 
@@ -13,17 +12,12 @@ class Dispatcher {
         $action = 'action' . Router::getAction();
 
         $params = Router::getParams();
-        
-        $controllerFile = ADMIN . "/controllers/{$controllerClass}.php";
+        $controllerFile =  Configs::getPath() . "/controllers/{$controllerClass}.php";
         if (!file_exists($controllerFile)) {
-            $controllerFile = FRONT . "/controllers/{$controllerClass}.php";
-            if (!file_exists($controllerFile)) {
                 echo "Controller '{$controller}' not found.";
                 if($controller !='Assets'){
                   throw new Exception("Controller '{$controller}' not found.");
                 }
-
-            }
         }
         if($controller !='Assets'){
             include $controllerFile;
