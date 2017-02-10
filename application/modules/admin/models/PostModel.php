@@ -7,6 +7,13 @@ class PostModel extends ActiveRecord\Model {
 
     static $before_save = array('setDate'); # new OR updated records
 
+    public function __construct ($attributes=array(), $guard_attributes=TRUE, $instantiating_via_find=FALSE, $new_record=TRUE) {
+
+         // Call the default Model constructor
+         parent::__construct ($attributes, $guard_attributes, $instantiating_via_find, $new_record);
+
+
+   }
     public function setDate() {
          $this->date = jDateTime::date('Y-m-d', false, false);
     }

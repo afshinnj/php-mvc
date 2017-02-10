@@ -2,12 +2,12 @@
 /*
  * database config
  *
- **/
+
 $configs['dbHost'] = 'localhost';
 $configs['dbUsername'] = 'root';
 $configs['dbPassword'] = '';
 $configs['dbName'] = 'blog';
-
+ **/
 
 ActiveRecord\Config::initialize(function($cfg)
 {
@@ -38,3 +38,9 @@ $configs['csrf_token_name'] = 'Mycsrf';
 
 
 $configs['lang'] = 'fa-IR';
+
+$modules =[
+        'admin'=>['Post','Admin','Login','User','Section'],
+        'front'=>['Post1','Admin1','Login1','User1','Section1'],
+
+];

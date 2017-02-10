@@ -1,14 +1,16 @@
-<?php
+<?php 
 
 class LoginController extends Controller {
-public $layoutFile = ADMIN;
+
+    public $layoutFile;
+
     public function __construct() {
         parent::__construct();
         new Login();
+
     }
 
     public function actionIndex() {
-        $_SESSION['lang'] = 'fa-IR';
         $msg = null;
         $a = User::signIn();
         if (Valid::$errors == FALSE) {

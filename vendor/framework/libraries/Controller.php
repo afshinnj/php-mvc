@@ -7,6 +7,9 @@ class Controller {
     public $layoutFile;
 
     public function __construct() {
+      if($this->layoutFile == NULL){
+          $this->layoutFile = 'application/modules/' . Configs::getPath();
+      }
 
     }
     /**
@@ -33,7 +36,7 @@ class Controller {
     protected function loadView($view, $values = array(), $useLayout = false) {
         extract($values);
         $controller = substr(strtolower(get_class($this)), 0, -10);
-            $viewFile = $this->layoutFile . "/views/{$controller}/{$view}.php";
+            $viewFile =  $this->layoutFile . "/views/{$controller}/{$view}.php";
             if (!file_exists($viewFile)) {
                 throw new Exception("View '{$view}.php' was not found in 'views/{$controller}' directory.");
             }

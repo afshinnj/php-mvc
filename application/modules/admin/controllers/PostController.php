@@ -1,8 +1,8 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php UserAuth::Token('login');
 
 class PostController extends Controller {
 
-    public $layoutFile = ADMIN;
+    public $layoutFile ;
 
     public function __construct() {
         parent::__construct();

@@ -4,30 +4,6 @@
 /* Many base styles are set in base.css, part of the skeleton framework
 ----------------------------------------------------------------------------------------------------*/
 @font-face {
-  font-family: 'BHelal';
-  src: url('fonts/BHelal.eot?#') format('eot'),  /* IE6–8 */
-       url('fonts/BHelal.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-       url('fonts/BHelal.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
-}
-@font-face {
-  font-family: 'BMahsa';
-  src: url('fonts/BMahsa.eot?#') format('eot'),  /* IE6–8 */
-       url('fonts/BMahsa.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-       url('fonts/BMahsa.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
-}
-@font-face {
-  font-family: 'BNazanin';
-  src: url('fonts/BNazanin.eot?#') format('eot'),  /* IE6–8 */
-       url('fonts/BNazanin.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-       url('fonts/BNazanin.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
-}
-@font-face {
-  font-family: 'BYekan';
-  src: url('fonts/BYekan.eot?#') format('eot'),  /* IE6–8 */
-       url('fonts/BYekan.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-       url('fonts/BYekan.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
-}
-@font-face {
 	font-family: 'IRANSans';
 	src: url('fonts/IRANSansWeb.eot');
 	src: url('fonts/IRANSansWeb.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/

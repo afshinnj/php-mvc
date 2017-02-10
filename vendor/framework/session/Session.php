@@ -85,7 +85,9 @@ class Session {
     public function sessionClose() {
         $this->_deleteExpired();
         if (session_id() !== '') {
-            @session_write_close();
+            session_write_close();
+
+            return true;
         }
     }
     /**
@@ -95,7 +97,7 @@ class Session {
      * @return boolean whether session is destroyed successfully
      */
     public function sessionDestroy($id) {
-        ///SessionModel::delete_all(array('conditions' => 'expire = "0"'));
+
         SessionModel::delete_all(array('conditions' => 'id = "'.$id.'"'));
         return TRUE;//(Driver::AffectedRows() > 0);
     }
@@ -148,6 +150,7 @@ class Session {
         $data = base64_encode($data);
         $expire = time() + $this->expire;
         SessionModel::Query("INSERT INTO `{$this->sessionTable}` VALUES ('{$id}','{$data}','{$expire}','') ON DUPLICATE KEY UPDATE `data`='{$data}',`expire`='{$expire}'");
+
     }
 
 }

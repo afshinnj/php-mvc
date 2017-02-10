@@ -7,7 +7,6 @@ class Configs {
     public function __construct() {
         require_once 'vendor/framework/config/configs.php';
         @include_once CONFIG . '/configs.php';
-        @include_once CONFIG . '/modules.php';
         self::$config = $configs;
 
         self::$module = $modules;
@@ -27,7 +26,12 @@ class Configs {
     */
     public static function getPath(){
 
-        return (isset(self::$module[Router::getController()]['module']) ? self::$module[Router::getController()]['module'] : null);
+      foreach (self::$module as $key => $value) {
+        if (in_array(Router::getController(), self::$module[$key])) {
+            return $key ;
+        }
+      }
+        
     }
 
 }

@@ -6,11 +6,8 @@ class Language {
 
     public function __construct() {
         require_once 'vendor/framework/language/language.php';
-        if (isset($_SESSION['lang'])) {
-            @include_once LANGUAGE ."/" . $_SESSION['lang'] . '.php';
-        } else {
-            @include_once LANGUAGE . "/". Configs::get('lang') . '.php';
-        }
+        @include_once LANGUAGE . "/". Configs::get('lang') . '.php';
+
 
         self::$Lang = $Langs;
     }

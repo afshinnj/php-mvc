@@ -2,7 +2,7 @@
 
 class AdminController extends Controller {
 
-   public $layoutFile = ADMIN;
+   public $layoutFile ;
 
     public function __construct() {
 
@@ -21,6 +21,7 @@ class AdminController extends Controller {
     public function actionIndex() {
         //throw new Exception("Not a valid object afafafafto load.");
         $this->render('index');
+        
     }
 
 
