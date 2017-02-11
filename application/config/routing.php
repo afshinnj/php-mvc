@@ -1,10 +1,8 @@
 <?php
 
 $route = array(
-    'login' => 'login/index',
-    'reg' => 'user/reg',
-    'profile' => 'user/profile',
-    'change-password' => 'user/changePassword',
+    'login' => 'user/login',
+
     'post' =>'post/index',
     'addPost' =>'post/insert',
     'postEdit' =>'post/edit',
@@ -16,4 +14,9 @@ $route = array(
     'sectionEdit' =>'section/edit',
     'sectionUpdate' =>'section/update',
     'sectionDelete' =>'section/delete',
+
+    'upload' => 'admin/upload',
+
+
+
 );

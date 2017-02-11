@@ -40,7 +40,8 @@ $configs['csrf_token_name'] = 'Mycsrf';
 $configs['lang'] = 'fa-IR';
 
 $modules =[
-        'admin'=>['Post','Admin','Login','User','Section'],
+        'admin'=>['Post','Admin','Section'],
         'front'=>['Post1','Admin1','Login1','User1','Section1'],
+        'user'=>['User'],
 
 ];

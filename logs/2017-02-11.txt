@@ -1,0 +1,118 @@
+Time : 18:40:48
+Call to undefined method: unique
+
+Time : 18:40:02
+Call to undefined method: unique
+
+Time : 18:39:51
+Call to undefined method: unique
+
+Time : 18:39:50
+Call to undefined method: unique
+
+Time : 18:38:18
+PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.user_models' doesn't exist in /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Connection.php:310
+Stack trace:
+#0 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Connection.php(310): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/adapters/MysqlAdapter.php(25): ActiveRecord\Connection->query('SHOW COLUMNS FR...')
+#2 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Connection.php(255): ActiveRecord\MysqlAdapter->query_column_info('`user_models`')
+#3 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Table.php(370): ActiveRecord\Connection->columns('`user_models`')
+#4 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Cache.php(67): ActiveRecord\Table->ActiveRecord\{closure}()
+#5 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Table.php(370): ActiveRecord\Cache::get('get_meta_data-`...', Object(Closure))
+#6 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Table.php(82): ActiveRecord\Table->get_meta_data()
+#7 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Table.php(61): ActiveRecord\Table->__construct('UserModel')
+#8 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Model.php(744): ActiveRecord\Table::load('UserModel')
+#9 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Model.php(257): ActiveRecord\Model::table()
+#10 /opt/lampp/htdocs/mvc/application/modules/user/controllers/UserController.php(29): ActiveRecord\Model->__construct()
+#11 /opt/lampp/htdocs/mvc/vendor/framework/core/Dispatcher.php(32): UserController->actionLogin(NULL)
+#12 /opt/lampp/htdocs/mvc/index.php(18): Dispatcher::dispatch()
+#13 {main}
+
+Time : 18:38:03
+PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.user_models' doesn't exist in /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Connection.php:310
+Stack trace:
+#0 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Connection.php(310): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/adapters/MysqlAdapter.php(25): ActiveRecord\Connection->query('SHOW COLUMNS FR...')
+#2 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Connection.php(255): ActiveRecord\MysqlAdapter->query_column_info('`user_models`')
+#3 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Table.php(370): ActiveRecord\Connection->columns('`user_models`')
+#4 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Cache.php(67): ActiveRecord\Table->ActiveRecord\{closure}()
+#5 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Table.php(370): ActiveRecord\Cache::get('get_meta_data-`...', Object(Closure))
+#6 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Table.php(82): ActiveRecord\Table->get_meta_data()
+#7 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Table.php(61): ActiveRecord\Table->__construct('UserModel')
+#8 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Model.php(744): ActiveRecord\Table::load('UserModel')
+#9 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Model.php(257): ActiveRecord\Model::table()
+#10 /opt/lampp/htdocs/mvc/application/modules/user/models/UserModel.php(14): ActiveRecord\Model->__construct(Array, true, false, true)
+#11 /opt/lampp/htdocs/mvc/application/modules/user/controllers/UserController.php(29): UserModel->__construct()
+#12 /opt/lampp/htdocs/mvc/vendor/framework/core/Dispatcher.php(32): UserController->actionLogin(NULL)
+#13 /opt/lampp/htdocs/mvc/index.php(18): Dispatcher::dispatch()
+#14 {main}
+
+Time : 18:38:03
+PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.user_models' doesn't exist in /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Connection.php:310
+Stack trace:
+#0 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Connection.php(310): PDOStatement->execute(Array)
+#1 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/adapters/MysqlAdapter.php(25): ActiveRecord\Connection->query('SHOW COLUMNS FR...')
+#2 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Connection.php(255): ActiveRecord\MysqlAdapter->query_column_info('`user_models`')
+#3 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Table.php(370): ActiveRecord\Connection->columns('`user_models`')
+#4 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Cache.php(67): ActiveRecord\Table->ActiveRecord\{closure}()
+#5 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Table.php(370): ActiveRecord\Cache::get('get_meta_data-`...', Object(Closure))
+#6 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Table.php(82): ActiveRecord\Table->get_meta_data()
+#7 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Table.php(61): ActiveRecord\Table->__construct('UserModel')
+#8 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Model.php(744): ActiveRecord\Table::load('UserModel')
+#9 /opt/lampp/htdocs/mvc/vendor/framework/database/lib/Model.php(257): ActiveRecord\Model::table()
+#10 /opt/lampp/htdocs/mvc/application/modules/user/models/UserModel.php(14): ActiveRecord\Model->__construct(Array, true, false, true)
+#11 /opt/lampp/htdocs/mvc/application/modules/user/controllers/UserController.php(29): UserModel->__construct()
+#12 /opt/lampp/htdocs/mvc/vendor/framework/core/Dispatcher.php(32): UserController->actionLogin(NULL)
+#13 /opt/lampp/htdocs/mvc/index.php(18): Dispatcher::dispatch()
+#14 {main}
+
+Time : 18:32:29
+Call to undefined method: unique
+
+Time : 18:30:21
+Call to undefined method: unique
+
+Time : 18:30:20
+Call to undefined method: unique
+
+Time : 18:29:30
+Call to undefined method: unique
+
+Time : 18:29:27
+Call to undefined method: unique
+
+Time : 18:29:24
+Call to undefined method: unique
+
+Time : 18:07:48
+Controller 'User' not found.
+
+Time : 18:07:35
+Controller 'Site' not found.
+
+Time : 18:07:34
+Controller 'Site' not found.
+
+Time : 18:07:13
+Couldn't find SessionModel with ID=pp687d1s1nvt6q5mnagqomj1s3
+
+Time : 18:06:51
+Couldn't find SessionModel with ID=pp687d1s1nvt6q5mnagqomj1s3
+
+Time : 18:05:36
+Couldn't find SessionModel with ID=pp687d1s1nvt6q5mnagqomj1s3
+
+Time : 18:05:29
+Couldn't find SessionModel with ID=pp687d1s1nvt6q5mnagqomj1s3
+
+Time : 18:05:03
+Couldn't find SessionModel with ID=pp687d1s1nvt6q5mnagqomj1s3
+
+Time : 18:04:53
+Couldn't find SessionModel with ID=pp687d1s1nvt6q5mnagqomj1s3
+
+Time : 18:04:52
+Couldn't find SessionModel with ID=pp687d1s1nvt6q5mnagqomj1s3
+
+Time : 11:19:37
+Exceeded filesize limit.

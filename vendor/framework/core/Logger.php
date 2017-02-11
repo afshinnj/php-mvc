@@ -10,17 +10,17 @@
 class Logger {
     # @string, Log directory name
 
-    private $path = '/../../../logs/';
+    private $path = '/logs/';
 
     # @void, Default Constructor, Sets the timezone and path of the log files.
 
     public function __construct() {
         date_default_timezone_set('Europe/Amsterdam');
-        $this->path = dirname(__FILE__) . $this->path;
+        $this->path = dirname(dirname(dirname(dirname(__FILE__)))) . $this->path;
     }
 
     /**
-     *   @void 
+     *   @void
      * 	Creates the log
      *
      *   @param string $message the message which is written into the log.
@@ -54,7 +54,7 @@ class Logger {
 
     /**
      *  @void
-     *  Gets called if log exists. 
+     *  Gets called if log exists.
      *  Modifies current log and adds the message to the log.
      *
      * @param string $log

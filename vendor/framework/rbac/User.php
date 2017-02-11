@@ -110,7 +110,12 @@ class User extends ActiveRecord\Model{
     $find->login = 0;
     $find->save();
     session_unset();
-    session_destroy();
+    //session_destroy();
+  }
+
+  public static function unique($a =[]){
+    
+
   }
 
 

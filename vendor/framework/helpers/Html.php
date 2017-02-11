@@ -436,7 +436,7 @@ class Html {
      * @param	bool	$recursing
      * @return	string
      */
-    function form_hidden($name, $value = '', $recursing = FALSE)
+    function hidden($name, $value = '', $recursing = FALSE)
     {
       static $form;
 
@@ -481,7 +481,7 @@ class Html {
   	 * @param	mixed
   	 * @return	string
   	 */
-  	function form_upload($data = '', $value = '', $extra = '')
+  	public static function upload($data = '', $value = '', $extra = '')
   	{
   		$defaults = array('type' => 'file', 'name' => '');
   		is_array($data) OR $data = array('name' => $data);

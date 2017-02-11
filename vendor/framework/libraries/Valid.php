@@ -21,8 +21,14 @@ class Valid{
      *
      */
     public static function addRole($var, $data = []) {
+      if (isset($data['on'])) {
+          if ($data['on'] != '') {
 
-        if (isset($_POST[$var])) {
+            $on = $data['on'];
+
+          }
+      }
+        if (isset($_POST[$var]) and $on == Router::getAction()) {
           self::$errors = FALSE;
             self::addSource($_POST);
             setcookie('valid_'.$var, '', time() - 1200);
@@ -81,6 +87,7 @@ class Valid{
                     self::unique($var, $data['unique']);
                 }
             }
+
         }
     }
 
@@ -208,6 +215,8 @@ class Valid{
         //self::$source[$var];
         $_COOKIE['valid_'.$var] = $var . '' . $message;
     }
+
+
 
     public static function unique($var, $unique){
 

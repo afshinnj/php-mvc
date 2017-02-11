@@ -2,7 +2,7 @@
 
 class SectionController extends Controller {
 
-    public $layoutFile = ADMIN;
+    public $layoutFile ;
 
     public function __construct() {
         parent::__construct();

@@ -1,5 +1,4 @@
 <?php
-
 define('DEVELOPMENT_ENVIRONMENT', TRUE);
 //define('ADMIN', 'application/modules/admin');
 //define('FRONT', 'application/modules/front');
@@ -33,3 +32,5 @@ function MyErrorHandler($eNumber, $eMessage, $eFile = NULL, $eLine = NULL, $eCon
     echo '</div>';
 }
 set_error_handler('MyErrorHandler', E_ALL);
+
+//print_r($_SERVER);
